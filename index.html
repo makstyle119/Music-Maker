@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Music Maker || Create Your Own Beat  || MAKSTYLE119"/>
+  <meta name="keywords" content="Music Maker, Create Your Own Beat, Beat Maker, JS, Vanilla Js,MAKSTYLE119" />
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    rel="stylesheet"
+  />
+  <!-- MDB -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+  rel="stylesheet"
+  />
+  <title>Music Maker</title>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1> Music Maker </h1>
+      <p> Make Beat By Just Clicking </p>
+    </header>
+    <div class="drums p-4 w-100 text-center text-white" style="background-color: rgb(30, 30, 30);">
+      <div class="kick d-flex justify-content-evenly">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(0)} name="" id="0">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(1)} name="" id="1">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(2)} name="" id="2">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(3)} name="" id="3">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(4)} name="" id="4">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(5)} name="" id="5">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(6)} name="" id="6">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(7)} name="" id="7">
+      </div>
+      <div class="snare d-flex justify-content-evenly">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(8)} name="" id="8">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(9)} name="" id="9">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(10)} name="" id="10">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(11)} name="" id="11">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(12)} name="" id="12">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(13)} name="" id="13">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(14)} name="" id="14">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(15)} name="" id="15">
+      </div>
+      <div class="clap d-flex justify-content-evenly">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(16)} name="" id="16">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(17)} name="" id="17">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(18)} name="" id="18">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(19)} name="" id="19">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(20)} name="" id="20">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(21)} name="" id="21">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(22)} name="" id="22">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(23)} name="" id="23">
+      </div>
+      <div class="cowbell d-flex justify-content-evenly">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(24)} name="" id="24">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(25)} name="" id="25">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(26)} name="" id="26">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(27)} name="" id="27">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(28)} name="" id="28">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(29)} name="" id="29">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(30)} name="" id="30">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(31)} name="" id="31">
+      </div>
+      <div class="crash d-flex justify-content-evenly">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(32)} name="" id="32">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(33)} name="" id="33">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(34)} name="" id="34">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(35)} name="" id="35">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(36)} name="" id="36">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(37)} name="" id="37">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(38)} name="" id="38">
+        <input class="form-check-input m-2" type="checkbox" onclick={getSelectedId(39)} name="" id="39">
+      </div>
+    </div>
+    <footer class="bg-dark text-center text-white w-100">
+      <!-- Grid container -->
+      <div class="d-none container p-4 pb-0">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input class="form-check-input m-2" type="email" id="form5Example29" class="form-control" />
+                  <label class="form-label" for="form5Example29">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->    
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+      </div>
+      <!-- Grid container -->
+      <!-- Grid container -->
+      <div class="container p-2 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-2">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.facebook.com/MAKSTYLE119" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/MAKSTYLE119" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <!-- Google -->
+          <!-- <a class="btn btn-outline-light btn-floating m-1" target="_blank" role="button"
+            ><i class="fab fa-google"></i
+          ></a> -->
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/makstyle119/" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.linkedin.com/in/mohammad-moiz-ali-00b2a3208/" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/moizalikhan119" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        MAKSTYLE119
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.35/Tone.min.js" 
+    integrity="sha512-1OeSTMhU9IsD/nfAsUZVSZmoEjXXyAbcLElGD0pDVaMyaTFBE5Fff6sBVW4H6kB8UOc13oybc6G4Srkk8CnEVw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="app.js"></script>
+    <!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
+  ></script>
+</body>
+</html>
