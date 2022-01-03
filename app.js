@@ -16,29 +16,19 @@ function sequencer() {
     let crashInputs = document.querySelector(`.crash input:nth-child(${step + 1})`);
     if(kickInputs.checked) {
       kick.start();
-    } else if (!kickInputs.checked) {
-      kick.stop();
     }
     if(snareInputs.checked) {
       snare.start();
-    } else if (!snareInputs.checked) {
-      snare.stop();
-    }
+    } 
     if(cowbellInputs.checked) {
       cowbell.start();
-    } else if (!cowbellInputs.checked) {
-      cowbell.stop();
-    }
+    } 
     if(clapInputs.checked) {
       clap.start();
-    } else if (!clapInputs.checked) {
-      clap.stop();
-    }
+    } 
     if(crashInputs.checked) {
       crash.start();
-    } else if (!crashInputs.checked) {
-      crash.stop();
-    }
+    } 
     index++;
   }
 }
