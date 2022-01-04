@@ -34,14 +34,14 @@ function sequencer() {
 }
 sequencer();
 
-let checkedId = [];
-function getSelectedId (id) {
-  checkedId.push(id);
-}
+// let checkedId = [];
+// function getSelectedId (id) {
+//   checkedId.push(id);
+// }
 
-setInterval(function(){ 
-  if(checkedId.length > 0) {
-    document.getElementById(`${checkedId[0]}`).checked = false;
-    checkedId.splice(0, 1);
-  }
-}, 4000);
+// setInterval(function(){ 
+//   if(checkedId.length > 0) {
+//     document.getElementById(`${checkedId[0]}`).checked = false;
+//     checkedId.splice(0, 1);
+//   }
+// }, 4000);
